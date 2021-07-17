@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/0ea2c80901.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_login</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="full_nav">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                </div>
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="/"><span class="glyphicon glyphicon-home"></span>HOME</a>
+                            </li>
+                            <li>
+                                <a href="/books" class="active"><span class="glyphicon glyphicon-book"></span>BOOKS</a>
+                            </li>
+                            <li>
+                                <a href="/student_login"><span class="glyphicon glyphicon-user"></span>USER_LOGIN</a>
+                            </li>
+                            <li>
+                                <a href="/admin_login"><span class="glyphicon glyphicon-user"></span>ADMIN_LOGIN</a>
+                            </li>
+                            <li>
+                                <a href="/feedback"><span class="glyphicon glyphicon-envelope"></span>FEEDBACK</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <a href="#" id="scroll_top">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+        </a>
+        <section>
+            <br><br><br>
+            <div id="return_add_box" style="display: flex;">
+                <div id="box" style="width: 400px;height: 650px;margin-left: 200px;margin-right: 0px;margin-top: 0px;">
+                    <br><br>
+                    <h1 style="text-align: center;font-size: 50px;letter-spacing: 2px;">Return Books</h1><br><br><br>
+                    <form action="/return_book" method="POST" id="contact">
+                        <div class="login">
+                            <input type="number" name="isbn" placeholder="ISBN" required=""><br><br>
+                            <input type="text" name="book_title" placeholder="Book Title" required=""><br><br>
+                            <input type="text" name="catogary" placeholder="Catogary" required=""><br><br>
+                            <input type="text" name="author_name" placeholder="Author Name" required=""><br><br>
+                            <input type="number" name="price" placeholder="Price" required=""><br><br>
+                            <input type="number" name="quantity" placeholder="Quantity" required=""><br><br><br>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="box" style="width: 400px;height: 650px;margin-left: 200px;margin-right: 0px;margin-top: 0px;">
+                    <br><br>
+                    <h1 style="text-align: center;font-size: 50px;letter-spacing: 2px;">Add Books</h1><br><br><br>
+                    <form action="/add_book" method="POST" id="contact">
+                        <div class="login">
+                            <input type="number" name="isbn" placeholder="ISBN" required=""><br><br>
+                            <input type="text" name="book_title" placeholder="Book Title" required=""><br><br>
+                            <input type="text" name="catogary" placeholder="Catogary" required=""><br><br>
+                            <input type="text" name="author_name" placeholder="Author Name" required=""><br><br>
+                            <input type="number" name="price" placeholder="Price" required=""><br><br>
+                            <input type="number" name="quantity" placeholder="Quantity" required=""><br><br><br>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <a href="#" id="scroll_top">
+                <span class="glyphicon glyphicon-arrow-up"></span>
+            </a>
+        </section>
+        <footer>
+            <br>
+            <p style="text-align: center;"><a href="index.html" style="color: white;"><span
+                        class="glyphicon glyphicon-arrow-up" style="color: rgb(124, 191, 223);"></span> Back to top</a>
+            </p>
+            <p>
+                &nbsp&nbsp&nbsp<span class="glyphicon glyphicon-link" style="color: rgb(124, 191, 223);"></span> <a
+                    href="" style="color: white;text-decoration: none;">facebook</a><br>
+                &nbsp&nbsp&nbsp<span class="glyphicon glyphicon-link" style="color: rgb(124, 191, 223);"></span> <a
+                    href="" style="color: white;text-decoration: none;">instagram</a><br>
+                &nbsp&nbsp&nbsp<span class="glyphicon glyphicon-link" style="color: rgb(124, 191, 223);"></span> <a
+                    href="" style="color: white;text-decoration: none;">twitter</a>
+            </p>
+            <p style="text-align: center;color: white;font-size: 11px;">PrivacyPolicies.com © 2002 - 2021 All rights
+                reserved</p>
+        </footer>
+    </div>
+</body>
+
+</html>

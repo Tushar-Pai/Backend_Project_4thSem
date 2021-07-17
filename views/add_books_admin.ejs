@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- Google Fonts link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700
+        ;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,
+        300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <!--  Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Add Books</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <!-- Our custom stylesheet -->
+    <link rel="stylesheet" href="./CSS/registration.css">
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <div class="container-nav">
+
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <a class="navbar-brand nav-link"><i class="fas fa-book-reader fa-2x"></i> BMSCE Library</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"> <i class="fa fa-bars" aria-hidden="true"
+                                style="color:#7868e6"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav  ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/available_books_admin">Available
+                                    books</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/add_books_admin">Add books</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/issued_books_admin">Issued Books</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="/logout">Logout</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+            <% if(typeof alert !='undefined' ) { %>
+                <% alert.forEach(function(error) { %>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= error.msg %>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <% }) %>
+                        <% } %>
+
+                            <% if(typeof msg !='undefined' ) { %>
+
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <%= msg %>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                            aria-label="Close"></button>
+                                </div>
+
+                                <% } %>
+
+        </div>
+
+    </header>
+
+
+    <section id="registration">
+        <div class="container-nav">
+
+
+
+
+            <h4>Add Books</h4>
+
+            <form action="/add_books_admin" method="POST" id="contact">
+                <div class="mb-3">
+                    <label for="isbn" class="form-label anim-down">Enter ISBN
+                    </label>
+                    <input type="number" name="isbn" class="form-control anim-down" id="isbn">
+                </div>
+                <div class="mb-3">
+                    <label for="name_of_book" class="form-label anim-down">Name of book</label>
+                    <input type="text" name="name_of_book" class="form-control anim-down" id="name_of_book"
+                        aria-describedby="nameHelp" autocomplete="off">
+                </div>
+
+                <div class="mb-3">
+                    <label for="category" class="form-label anim-down">Category</label>
+                    <input type="text" name="category" class="form-control anim-down" aria-describedby="nameHelp"
+                        id="category" autocomplete="off">
+                </div>
+                <div class="mb-3">
+                    <label for="author_name" class="form-label anim-down">Author Name</label>
+                    <input type="text" name="author_name" class="form-control anim-down" id="author_name"
+                        aria-describedby="nameHelp" autocomplete="off">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label anim-down">Price</label>
+                    <input type="number" name="price" class="form-control anim-down" id="price"
+                        aria-describedby="nameHelp" autocomplete="off">
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label anim-down">Quantity</label>
+                    <input type="number" name="quantity" class="form-control anim-down" id="quantity"
+                        aria-describedby="nameHelp" autocomplete="off">
+                </div>
+
+
+                <button type="submit" class="btn btn-color">Add book</button>
+            </form>
+
+
+        </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+    <!-- Bootstrap JS bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <!-- <script src="./js/registration_gsap.js"></script> -->
+</body>
+
+</html>

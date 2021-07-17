@@ -1,0 +1,82 @@
+body {
+    background-color: #e4fbff;
+}
+
+nav {
+    letter-spacing: 1.5px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container-nav {
+    margin: 5% 7%;
+}
+
+.nav-link {
+    color: #7868e6;
+    font-size: larger;
+}
+
+.nav-link:hover {
+    color: #b8b5ff;
+}
+
+.active {
+    text-decoration: none;
+    color: black;
+}
+
+.active:hover {
+    text-decoration: none;
+    color: #7868e6;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    font-size: larger;
+    letter-spacing: 2px;
+}
+
+#login img {
+    height: 75%;
+    width: 75%;
+    margin-top: 4%;
+}
+
+#login h4 {
+    color: black;
+    text-align: center;
+    margin-bottom: 6%;
+}
+
+#signup a {
+    text-decoration: none;
+    color: #7868e6;
+}
+
+#signup {
+    margin-top: 4%;
+    font-size: large;
+}
+
+.col-lg-6 {
+    margin-top: 1%;
+}
+
+.btn {
+    font-size: large;
+    font-weight: 500;
+}
+
+.btn-color {
+    background-color: #7868e6;
+    margin-top: 3%;
+    color: white;
+}
+
+.btn-color:hover {
+    background-color: #b8b5ff;
+}
+
+::-webkit-scrollbar {
+    background-color: #e4fbff;
+}
